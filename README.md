@@ -1,0 +1,2 @@
+# Gitsdc
+Electronic Gadget application
