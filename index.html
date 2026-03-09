@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHub - Premium Electronic Gadgets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">TechHub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="nav-icon">🔍</a>
+                <a href="#" class="nav-icon cart-icon" id="cart-icon">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to TechHub</h1>
+            <p class="hero-subtitle">Discover the Latest Electronic Gadgets & Devices</p>
+            <button class="btn btn-primary" onclick="scrollToProducts()">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23f0f4f8' width='300' height='300'/%3E%3Ccircle cx='150' cy='150' r='100' fill='%2300d4ff' opacity='0.1'/%3E%3Ctext x='150' y='160' text-anchor='middle' font-size='40' fill='%2300d4ff'%3E📱%3C/text%3E%3C/svg%3E" alt="Hero">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3>Free Shipping</h3>
+                <p>On orders over $50</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3>Secure Payment</h3>
+                <p>100% safe transactions</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">↩️</div>
+                <h3>Easy Returns</h3>
+                <p>30-day return policy</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Quality Guaranteed</h3>
+                <p>Original products only</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="products-header">
+            <h2>Featured Products</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+                <button class="filter-btn" onclick="filterProducts('phones')">Phones</button>
+                <button class="filter-btn" onclick="filterProducts('laptops')">Laptops</button>
+                <button class="filter-btn" onclick="filterProducts('accessories')">Accessories</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get exclusive deals and latest updates directly to your inbox</p>
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About TechHub</h2>
+            <p>TechHub is your one-stop destination for premium electronic gadgets and devices. We offer a curated selection of the latest technology products from trusted brands worldwide. Our mission is to make cutting-edge technology accessible to everyone.</p>
+            <div class="about-stats">
+                <div class="stat">
+                    <h3>10K+</h3>
+                    <p>Products</p>
+                </div>
+                <div class="stat">
+                    <h3>50K+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat">
+                    <h3>100+</h3>
+                    <p>Brands</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form onsubmit="handleContactSubmit(event)">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Tech Street, Silicon Valley, CA 94025</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@techhub.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div id="cart-empty" class="cart-empty">
+                <p>Your cart is empty</p>
+            </div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total">0.00</span></h3>
+                <button class="btn btn-primary" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
